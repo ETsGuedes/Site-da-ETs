@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url(assets/fundo.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Barra de navegação */
+header {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5vh;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;  
+    top: 0;  
+    left: 0;
+    width: 100%;  
+    background-color: transparent; 
+    padding: 15px; 
+}
+
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+
+.nav-links li a:hover {
+    color: #4CAF50; /* Verde da Easy Tech */
+}
+
+/* Ícones sociais */
+.social-icons a {
+    margin-left: 15px;
+    color: white;
+    font-size: 1.7rem;
+}
+
+.social-icons a:hover {
+    color: #4CAF50;
+}
+
+
+.user-icon button {
+    background-color: #45a049;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-icon button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    color: #45a049;
+}
+
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: white;
+}
+
+.modal-content button {
+    background-color: #45a049;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#register-link {
+    color: #45a049;
+    text-decoration: none;
+}
+
+#register-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Seção hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Para escurecer o fundo */
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.hero .subtext {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 15px 40px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.white-btn {
+    background-color: white;
+    color: black;
+}
+
+.white-btn:hover {
+    background-color: #ddd;
+}
+
+.green-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.green-btn:hover {
+    background-color: #45a049;
+}
+
+
+/* Seção de Serviços */
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 20px 60px 20px;
+    text-align: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.services h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #4CAF50;
+    margin-bottom: 50px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.service-item {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.service-item h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Botão de Contato */
+.contact-button {
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 15px 40px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.green-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.green-btn:hover {
+    background-color: #45a049;
+}
+/* Seção Sobre Nós */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    color: #45a049; /* Cor verde */
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    color: #bbb;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+/* Seção Funcionários */
+.team-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.team-section h2 {
+    font-size: 2.5em;
+    color: #45a049; /* Cor verde */
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.team-member {
+    background-color: #111;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-avatar {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    color: #a0ff00;
+    margin-bottom: 5px;
+}
+
+.team-member .role {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 0.9em;
+    color: #bbb;
+    line-height: 1.5;
+}
+
+/* Seção de Contatos */
+.contact-section {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    height: 100vh;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #45a049;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group-left,
+.form-group-right {
+    width: 48%; /* Tamanho de cada coluna */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: white;
+    font-size: 1em;
+}
+
+.contact-form button {
+    padding: 15px 40px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 300px;
+    background-color: #000;
+}
+
+.footer .imgs{
+    width: 25vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.footer img {
+    height: 150px;
+    width: 150px;
+}
+
+.footer .contatos {
+    width: 25vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.footer .contatos h3{
+    color: #45a049;
+}
+
+.footer .contatos p{
+    color: #666;
+}
+
